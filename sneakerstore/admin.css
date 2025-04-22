@@ -1,0 +1,86 @@
+/* Make sure the product image container has enough space */
+.productImg {
+    width: 50%; /* Ensure enough space for the image */
+    height: auto; /* Allow the height to adjust based on the image aspect ratio */
+    object-fit: contain; /* Maintain aspect ratio of the image */
+    position: relative;
+    z-index: 1; /* Make sure the image is on top */
+}
+
+/* Adjust the product details container */
+.productDetails {
+    position: absolute;
+    top: 10%;
+    right: 0;
+    width: 40%;
+    padding: 50px;
+    z-index: 2; /* Ensure details appear over the image */
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start; /* Align details to the left */
+}
+
+/* If you want to add padding or margins to avoid overlap, adjust here */
+.productTitle {
+    font-size: 75px;
+    font-weight: 900;
+    margin-bottom: 20px; /* Space between title and the other content */
+}
+
+.productDesc {
+    font-size: 24px;
+    color: gray;
+    margin-bottom: 30px; /* Add space between description and color/size selectors */
+}
+
+/* Fix color and size selectors */
+.colors, .sizes {
+    display: flex;
+    margin-bottom: 20px;
+}
+
+.color, .size {
+    margin-right: 10px; /* Add margin between items */
+}
+
+.productButton {
+    padding: 15px 20px;
+    background-color: #111; /* Set button color */
+    color: rgb(8, 8, 8);
+    font-weight: 600;
+    cursor: pointer;
+    border: none;
+    margin-top: 20px; /* Add some space above the button */
+}
+
+.productButton:hover {
+    background-color: #369e62;
+    color: black;
+}
+
+/* Responsive adjustments for mobile */
+@media screen and (max-width: 480px) {
+    .productImg {
+        width: 80%; /* Increase the image size on mobile */
+        margin-bottom: 20px; /* Space between image and product details */
+    }
+
+    .productDetails {
+        width: 90%;
+        top: 5%;
+        padding: 20px;
+    }
+
+    .productTitle {
+        font-size: 50px;
+    }
+
+    .productDesc {
+        font-size: 20px;
+    }
+
+    .productButton {
+        width: 100%;
+        padding: 15px 0;
+    }
+}
